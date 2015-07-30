@@ -5,21 +5,25 @@
 	"configurations": [
 		{
 			// Name of configuration; appears in the launch configuration drop down menu.
-			"name": "Launch app.js",
+			"name": "node gulp.js",
 			// Type of configuration. Possible values: "node", "mono".
 			"type": "node",
 			// Workspace relative or absolute path to the program.
-			"program": "app.js",
+			"program": "./node_modules/gulp/bin/gulp.js",
 			// Automatically stop program after launch.
 			"stopOnEntry": true,
 			// Command line arguments passed to the program.
-			"args": [],
+			"args": ["serve"],
 			// Workspace relative or absolute path to the working directory of the program being debugged. Default is the current workspace.
 			"cwd": ".",
 			// Workspace relative or absolute path to the runtime executable to be used. Default is the runtime executable on the PATH.
 			"runtimeExecutable": null,
 			// Environment variables passed to the program.
-			"env": { }
+			"env": { },
+			// Use JavaScript source maps
+			"sourceMaps": true,
+            // If JavaScript source maps are enabled, the generated code is expected in this directory.
+            "outDir": "/.tmp/serve"
 		}, 
 		{
 			"name": "Attach",
@@ -27,7 +31,7 @@
 			// TCP/IP address. Default is "localhost".
 			"address": "localhost",
 			// Port to attach to.
-			"port": 5858
+			"port": 3000
 		}
 	]
 }
